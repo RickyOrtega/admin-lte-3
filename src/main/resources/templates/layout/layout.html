@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <footer th:fragment="footer">
+        <div class="float-right d-none d-sm-inline">
+            Version 1.1.0
+        </div>
+
+        <strong>
+            Copyright &copy; 2023
+            <a th:href="@{'/'}" th:text="${app.title}"></a>.
+        </strong>
+
+        All rights reserved.
+    </footer>
+    <!-- Scripts -->
+    <div th:fragment="scripts">
+        <!-- jquery -->
+        <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+        <script th:src="@{/js/popper_2.11.8.min.js}"></script>
+        <!-- popper -->
+    </div>
+</body>
+</html>
