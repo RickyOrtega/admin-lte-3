@@ -10,6 +10,11 @@
             <section class="content">
                 <div class="container-fluid">
                     <div class="card card-primary card-outline">
+                        <!-- Esto es una prueba para saber si sí está llamando a la BD-->
+                        <span th:if="${empresa == null}" th:text="''"></span>
+                        <span th:if="${empresa != null}" th:text="${empresa.nombre}"></span>
+                        <!-- Este texto sale si el usuario manda el id de una empresa que no exista-->
+                        <span th:text="${error_empresa_no_existe}"></span>
                     </div>
                 </div>
             </section>
