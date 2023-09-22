@@ -66,7 +66,7 @@ INSERT INTO `ads_empresas` (`id`, `nit`, `nombre`, `direccion`, `email`, `estado
 --
 DROP VIEW IF EXISTS `view_empresas`;
 CREATE TABLE IF NOT EXISTS `view_empresas` (
-                                               `id` int unsigned
+    `id` int unsigned
     ,`nit` varchar(15)
     ,`nombre` varchar(150)
     ,`direccion` varchar(255)
@@ -91,3 +91,15 @@ SELECT `ads_empresas`.`id` AS`id`,
        `ads_empresas`.`email` AS `email`,
        `ads_empresas`.`estado` AS `estado`
 FROM `ads_empresas`;
+
+/*Tabla categorías*/
+
+DROP TABLE IF EXISTS `categorias`;
+CREATE TABLE IF NOT EXISTS `categorias` (
+    `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+    `nit` varchar(15) COLLATE utf8mb4_spanish_ci NOT NULL,
+    `nombre` varchar(150) COLLATE utf8mb4_spanish_ci NOT NULL,
+    `estado` varchar(10) COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT 'Activo',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `nombre` (`nombre`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
