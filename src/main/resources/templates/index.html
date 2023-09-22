@@ -3,7 +3,7 @@
 <head th:replace="~{layout/layout :: head}"></head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
     <div class="wrapper">
-        <nav th:replace="~{layout/layout :: nav}"></nav>
+        <nav th:replace="~{layout/layout :: navbar}"></nav>
         <aside th:replace="~{layout/layout :: aside}"></aside>
         <div class="content-wrapper">
             <header th:replace="~{layout/layout :: header}"></header>
@@ -14,8 +14,8 @@
                 </div>
             </section>
         </div>
+        <footer th:replace="~{layout/layout :: footer}"></footer>
     </div>
-    <footer th:replace="~{layout/layout :: footer}"></footer>
     <div th:replace="~{layout/layout :: scripts}"></div>
 </body>
 </html>
